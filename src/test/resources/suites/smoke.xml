@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="SmokeTestSuite" verbose="1">
+    <parameter name="browser" value="firefox"/>
+    <test name="LoginTests">
+        <groups>
+            <run>
+                <include name="smoke"/>
+                <exclude name="p2"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="saucedemo.login.LoginTest"/>
+        </classes>
+    </test>
+</suite>
