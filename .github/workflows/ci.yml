@@ -36,20 +36,33 @@ jobs:
           distribution: 'temurin'
           cache: 'gradle'
 
-      - name: Install Chrome
-        uses: browser-actions/setup-chrome@v1
-        with:
-          chrome-version: stable
-
-      - name: Set up ChromeDriver
-        uses: nanasess/setup-chromedriver@v2
-
-      - name: Display Chrome and ChromeDriver versions
+      - name: Setup Chrome and ChromeDriver
         run: |
-          google-chrome --version || chrome --version
+          sudo apt-get update
+          sudo apt-get install -y wget unzip
+          
+          # Install Chrome
+          wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+          sudo dpkg -i google-chrome-stable_current_amd64.deb || sudo apt-get install -f -y
+          
+          # Get Chrome version
+          CHROME_VERSION=$(google-chrome --version | awk '{print $3}' | cut -d. -f1)
+          echo "Chrome version: $CHROME_VERSION"
+          
+          # Download matching ChromeDriver
+          CHROMEDRIVER_VERSION=$(curl -s "https://googlechromelabs.github.io/chrome-for-testing/LATEST_RELEASE_$CHROME_VERSION")
+          echo "ChromeDriver version: $CHROMEDRIVER_VERSION"
+          
+          wget -q "https://storage.googleapis.com/chrome-for-testing-public/$CHROMEDRIVER_VERSION/linux64/chromedriver-linux64.zip"
+          unzip -q chromedriver-linux64.zip
+          sudo mv chromedriver-linux64/chromedriver /usr/local/bin/
+          sudo chmod +x /usr/local/bin/chromedriver
+          
+          # Verify installation
+          echo "Chrome installed at: $(which google-chrome)"
+          google-chrome --version
+          echo "ChromeDriver installed at: $(which chromedriver)"
           chromedriver --version
-          which google-chrome || which chrome
-          which chromedriver
 
       - name: Make gradlew executable
         run: chmod +x ./gradlew
@@ -59,6 +72,7 @@ jobs:
         env:
           GITHUB_ACTIONS: true
           CHROME_BIN: /usr/bin/google-chrome
+          CHROMEDRIVER_PATH: /usr/local/bin/chromedriver
 
       - name: Generate Test Report
         if: always()
