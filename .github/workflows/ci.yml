@@ -98,12 +98,4 @@ jobs:
           path: build/test-results/test/*.xml
           retention-days: 30
 
-      - name: Publish Test Results
-        if: always()
-        uses: EnricoMi/publish-unit-test-result-action@v2
-        with:
-          files: |
-            build/test-results/test/*.xml
-          check_name: Test Results - ${{ matrix.suite }}
-          comment_mode: off
 
