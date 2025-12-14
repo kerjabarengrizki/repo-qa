@@ -13,7 +13,12 @@ public class DriverManager {
         WebDriver webDriver = null;
         switch (browser.toLowerCase()) {
             case "chrome" -> {
-                WebDriverManager.chromedriver().setup();
+                String githubActions = System.getenv("GITHUB_ACTIONS");
+
+                if (githubActions == null || !githubActions.equals("true")) {
+                    WebDriverManager.chromedriver().setup();
+                }
+
                 ChromeOptions options = new ChromeOptions();
 
                 options.addArguments("--disable-blink-features=AutomationControlled");
@@ -25,8 +30,11 @@ public class DriverManager {
                 options.setExperimentalOption("useAutomationExtension", false);
                 options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
 
-                String githubActions = System.getenv("GITHUB_ACTIONS");
                 if (githubActions != null && githubActions.equals("true")) {
+                    String chromeBin = System.getenv("CHROME_BIN");
+                    if (chromeBin != null && !chromeBin.isEmpty()) {
+                        options.setBinary(chromeBin);
+                    }
                     options.addArguments("--headless=new");
                     options.addArguments("--disable-gpu");
                     options.addArguments("--window-size=1920,1080");

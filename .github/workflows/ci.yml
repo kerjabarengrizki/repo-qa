@@ -41,10 +41,15 @@ jobs:
         with:
           chrome-version: stable
 
-      - name: Display Chrome version
+      - name: Set up ChromeDriver
+        uses: nanasess/setup-chromedriver@v2
+
+      - name: Display Chrome and ChromeDriver versions
         run: |
-          chrome --version
-          which chrome
+          google-chrome --version || chrome --version
+          chromedriver --version
+          which google-chrome || which chrome
+          which chromedriver
 
       - name: Make gradlew executable
         run: chmod +x ./gradlew
@@ -53,6 +58,7 @@ jobs:
         run: ./gradlew clean test -Psuite=${{ matrix.suite }} -Penv=staging --no-daemon --stacktrace
         env:
           GITHUB_ACTIONS: true
+          CHROME_BIN: /usr/bin/google-chrome
 
       - name: Generate Test Report
         if: always()
