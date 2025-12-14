@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 public class LoginTest extends BaseTest{
 
     //test aja trigger pipeline
+    //tambahin lagi
     @Test(groups = {"smoke"})
     public void testLogin() {
         LoginPage loginPage = new LoginPage(DriverManager.getDriver());
