@@ -25,5 +25,6 @@ public class TransactionTest extends BaseTest {
         homePage.addToCart(); // ini diambil dari home page
         transaction.submitTransaction(); // ini diambil dari transaction
         transaction.verifySuccessTransaction(); //ini assertionsnya
+        //coba untuk trigger pipeline
     }
 }
