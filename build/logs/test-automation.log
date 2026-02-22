@@ -1,0 +1,81 @@
+2026-02-22 09:28:52.504 [Test worker] INFO  core.TestListener - ========== Test Suite Started: Login Tests - Running in Parallel ==========
+2026-02-22 09:28:52.577 [Test worker] INFO  core.TestListener - ExtentReports initialized. Report will be saved to: /Users/muhamad.rizki/Downloads/project-demo/repo-qa/reports/extent-report_2026-02-22_09-28-52.html
+2026-02-22 09:28:52.587 [TestNG-test-Login Tests - Running in Parallel-1] INFO  saucedemo.login.LoginTest - Loading test data from Excel file
+2026-02-22 09:28:57.626 [TestNG-PoolService-2] INFO  core.TestListener - ---------- Test Started: testDataDriven ----------
+2026-02-22 09:28:57.629 [TestNG-test-Login Tests - Running in Parallel-2] INFO  core.TestListener - ---------- Test Started: testFailedLogin ----------
+2026-02-22 09:28:57.627 [TestNG-test-Login Tests - Running in Parallel-3] INFO  core.TestListener - ---------- Test Started: testLogin ----------
+2026-02-22 09:28:57.663 [TestNG-test-Login Tests - Running in Parallel-2] INFO  saucedemo.login.LoginTest - ========== Starting testFailedLogin ==========
+2026-02-22 09:28:57.663 [TestNG-test-Login Tests - Running in Parallel-3] INFO  saucedemo.login.LoginTest - ========== Starting testLogin ==========
+2026-02-22 09:28:57.663 [TestNG-PoolService-2] INFO  saucedemo.login.LoginTest - ========== Starting testDataDriven ==========
+2026-02-22 09:28:57.671 [TestNG-PoolService-2] INFO  saucedemo.login.LoginTest - Test data - Username: standard_user, Expected Result: success
+2026-02-22 09:28:57.683 [TestNG-PoolService-1] INFO  core.TestListener - ---------- Test Started: testDataDriven ----------
+2026-02-22 09:28:57.687 [TestNG-PoolService-1] INFO  saucedemo.login.LoginTest - ========== Starting testDataDriven ==========
+2026-02-22 09:28:57.689 [TestNG-test-Login Tests - Running in Parallel-2] INFO  org.example.saucedemo.LoginPage - LoginPage initialized
+2026-02-22 09:28:57.689 [TestNG-PoolService-2] INFO  org.example.saucedemo.LoginPage - LoginPage initialized
+2026-02-22 09:28:57.689 [TestNG-test-Login Tests - Running in Parallel-3] INFO  org.example.saucedemo.LoginPage - LoginPage initialized
+2026-02-22 09:28:57.695 [TestNG-test-Login Tests - Running in Parallel-2] INFO  org.example.saucedemo.LoginPage - Attempting to login with username: locked_out_user
+2026-02-22 09:28:57.691 [TestNG-PoolService-1] INFO  saucedemo.login.LoginTest - Test data - Username: locked_out_user, Expected Result: failed
+2026-02-22 09:28:57.706 [TestNG-test-Login Tests - Running in Parallel-3] INFO  org.example.saucedemo.LoginPage - Attempting to login with username: locked_out_user
+2026-02-22 09:28:57.700 [TestNG-PoolService-2] INFO  org.example.saucedemo.LoginPage - Attempting to login with username: standard_user
+2026-02-22 09:28:57.715 [TestNG-PoolService-1] INFO  org.example.saucedemo.LoginPage - LoginPage initialized
+2026-02-22 09:28:57.730 [TestNG-PoolService-1] INFO  org.example.saucedemo.LoginPage - Attempting to login with username: locked_out_user
+2026-02-22 09:28:58.100 [TestNG-PoolService-1] INFO  org.example.saucedemo.LoginPage - Username entered
+2026-02-22 09:28:58.101 [TestNG-test-Login Tests - Running in Parallel-3] INFO  org.example.saucedemo.LoginPage - Username entered
+2026-02-22 09:28:58.129 [TestNG-test-Login Tests - Running in Parallel-2] INFO  org.example.saucedemo.LoginPage - Username entered
+2026-02-22 09:28:58.128 [TestNG-PoolService-2] INFO  org.example.saucedemo.LoginPage - Username entered
+2026-02-22 09:28:58.245 [TestNG-PoolService-2] INFO  org.example.saucedemo.LoginPage - Password entered
+2026-02-22 09:28:58.255 [TestNG-PoolService-1] INFO  org.example.saucedemo.LoginPage - Password entered
+2026-02-22 09:28:58.255 [TestNG-test-Login Tests - Running in Parallel-3] INFO  org.example.saucedemo.LoginPage - Password entered
+2026-02-22 09:28:58.259 [TestNG-test-Login Tests - Running in Parallel-2] INFO  org.example.saucedemo.LoginPage - Password entered
+2026-02-22 09:28:58.434 [TestNG-PoolService-1] INFO  org.example.saucedemo.LoginPage - Login button clicked
+2026-02-22 09:28:58.434 [TestNG-test-Login Tests - Running in Parallel-2] INFO  org.example.saucedemo.LoginPage - Login button clicked
+2026-02-22 09:28:58.434 [TestNG-test-Login Tests - Running in Parallel-3] INFO  org.example.saucedemo.LoginPage - Login button clicked
+2026-02-22 09:28:58.435 [TestNG-test-Login Tests - Running in Parallel-3] INFO  saucedemo.login.LoginTest - Verifying user can see the Products page after login
+2026-02-22 09:28:58.435 [TestNG-test-Login Tests - Running in Parallel-3] INFO  org.example.saucedemo.LoginPage - Checking if user is logged in successfully
+2026-02-22 09:28:58.437 [TestNG-PoolService-1] INFO  saucedemo.login.LoginTest - Verifying failed login for user: locked_out_user
+2026-02-22 09:28:58.439 [TestNG-test-Login Tests - Running in Parallel-2] INFO  saucedemo.login.LoginTest - Verifying error message is displayed for failed login
+2026-02-22 09:28:58.439 [TestNG-test-Login Tests - Running in Parallel-2] INFO  org.example.saucedemo.LoginPage - Checking if error message is displayed
+2026-02-22 09:28:58.444 [TestNG-PoolService-1] INFO  saucedemo.login.LoginTest - Checking if error message is displayed
+2026-02-22 09:28:58.445 [TestNG-PoolService-1] INFO  org.example.saucedemo.LoginPage - Checking if error message is displayed
+2026-02-22 09:28:58.504 [TestNG-test-Login Tests - Running in Parallel-2] INFO  org.example.saucedemo.LoginPage - Error message is displayed
+2026-02-22 09:28:58.504 [TestNG-PoolService-1] INFO  org.example.saucedemo.LoginPage - Error message is displayed
+2026-02-22 09:28:58.506 [TestNG-test-Login Tests - Running in Parallel-2] INFO  saucedemo.login.LoginTest - Checked: Error message visibility
+2026-02-22 09:28:58.506 [TestNG-test-Login Tests - Running in Parallel-2] INFO  saucedemo.login.LoginTest - Verifying user cannot access Products page with invalid credentials
+2026-02-22 09:28:58.506 [TestNG-test-Login Tests - Running in Parallel-2] INFO  org.example.saucedemo.LoginPage - Checking if user is logged in successfully
+2026-02-22 09:28:58.506 [TestNG-PoolService-1] INFO  saucedemo.login.LoginTest - Checked: Error message visibility
+2026-02-22 09:28:58.507 [TestNG-PoolService-1] INFO  saucedemo.login.LoginTest - Checking if user cannot access Products page
+2026-02-22 09:28:58.507 [TestNG-PoolService-1] INFO  org.example.saucedemo.LoginPage - Checking if user is logged in successfully
+2026-02-22 09:28:58.522 [TestNG-PoolService-2] INFO  org.example.saucedemo.LoginPage - Login button clicked
+2026-02-22 09:28:58.524 [TestNG-PoolService-2] INFO  saucedemo.login.LoginTest - Verifying successful login for user: standard_user
+2026-02-22 09:28:58.524 [TestNG-PoolService-2] INFO  saucedemo.login.LoginTest - Checking if user is logged in successfully
+2026-02-22 09:28:58.525 [TestNG-PoolService-2] INFO  org.example.saucedemo.LoginPage - Checking if user is logged in successfully
+2026-02-22 09:28:58.621 [TestNG-PoolService-2] INFO  org.example.saucedemo.LoginPage - User is logged in successfully - Products page is displayed
+2026-02-22 09:28:58.622 [TestNG-PoolService-2] INFO  saucedemo.login.LoginTest - Checked: Login success status
+2026-02-22 09:28:58.622 [TestNG-PoolService-2] INFO  saucedemo.login.LoginTest - Checking if user is redirected to inventory page
+2026-02-22 09:28:58.631 [TestNG-PoolService-2] INFO  org.example.saucedemo.LoginPage - Current URL: https://www.saucedemo.com/inventory.html
+2026-02-22 09:28:58.631 [TestNG-PoolService-2] INFO  saucedemo.login.LoginTest - Checked: Inventory page redirection
+2026-02-22 09:28:58.632 [TestNG-PoolService-2] INFO  saucedemo.login.LoginTest - Running all soft assertions for user: standard_user
+2026-02-22 09:28:58.632 [TestNG-PoolService-2] INFO  saucedemo.login.LoginTest - ========== testDataDriven completed for user: standard_user ==========
+2026-02-22 09:28:58.633 [TestNG-PoolService-2] INFO  core.TestListener - Test PASSED: testDataDriven (Duration: 1011ms)
+2026-02-22 09:29:08.712 [TestNG-test-Login Tests - Running in Parallel-3] ERROR org.example.saucedemo.LoginPage - Failed to verify login status: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.className: title' (tried for 10 second(s) with 500 milliseconds interval)
+2026-02-22 09:29:08.716 [TestNG-test-Login Tests - Running in Parallel-3] ERROR core.TestListener - Test FAILED: testLogin
+2026-02-22 09:29:08.716 [TestNG-test-Login Tests - Running in Parallel-3] ERROR core.TestListener - Failure reason: User should be able to see the Products page after logging in with valid credentials expected [true] but found [false]
+2026-02-22 09:29:08.778 [TestNG-PoolService-1] ERROR org.example.saucedemo.LoginPage - Failed to verify login status: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.className: title' (tried for 10 second(s) with 500 milliseconds interval)
+2026-02-22 09:29:08.780 [TestNG-PoolService-1] INFO  saucedemo.login.LoginTest - Checked: Products page access denied
+2026-02-22 09:29:08.781 [TestNG-PoolService-1] INFO  saucedemo.login.LoginTest - Running all soft assertions for user: locked_out_user
+2026-02-22 09:29:08.781 [TestNG-PoolService-1] INFO  saucedemo.login.LoginTest - ========== testDataDriven completed for user: locked_out_user ==========
+2026-02-22 09:29:08.781 [TestNG-PoolService-1] INFO  core.TestListener - Test PASSED: testDataDriven (Duration: 11098ms)
+2026-02-22 09:29:08.785 [TestNG-test-Login Tests - Running in Parallel-2] ERROR org.example.saucedemo.LoginPage - Failed to verify login status: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.className: title' (tried for 10 second(s) with 500 milliseconds interval)
+2026-02-22 09:29:08.786 [TestNG-test-Login Tests - Running in Parallel-2] INFO  saucedemo.login.LoginTest - Checked: Products page access denied
+2026-02-22 09:29:08.786 [TestNG-test-Login Tests - Running in Parallel-2] INFO  saucedemo.login.LoginTest - Verifying error message contains 'locked out' text
+2026-02-22 09:29:08.786 [TestNG-test-Login Tests - Running in Parallel-2] INFO  org.example.saucedemo.LoginPage - Getting error message text
+2026-02-22 09:29:08.828 [TestNG-test-Login Tests - Running in Parallel-2] INFO  org.example.saucedemo.LoginPage - Error message: Epic sadface: Sorry, this user has been locked out.
+2026-02-22 09:29:08.829 [TestNG-test-Login Tests - Running in Parallel-2] INFO  saucedemo.login.LoginTest - Checked: Error message content
+2026-02-22 09:29:08.829 [TestNG-test-Login Tests - Running in Parallel-2] INFO  saucedemo.login.LoginTest - Running all soft assertions
+2026-02-22 09:29:08.829 [TestNG-test-Login Tests - Running in Parallel-2] INFO  saucedemo.login.LoginTest - ========== testFailedLogin completed ==========
+2026-02-22 09:29:08.829 [TestNG-test-Login Tests - Running in Parallel-2] INFO  core.TestListener - Test PASSED: testFailedLogin (Duration: 11200ms)
+2026-02-22 09:29:09.072 [TestNG-test-Login Tests - Running in Parallel-3] INFO  core.TestListener - Screenshot saved: /Users/muhamad.rizki/Downloads/project-demo/repo-qa/reports/screenshots/testLogin_20260222_092908.png
+2026-02-22 09:29:09.074 [TestNG-test-Login Tests - Running in Parallel-3] INFO  core.TestListener - Screenshot captured: screenshots/testLogin_20260222_092908.png
+2026-02-22 09:29:09.308 [Test worker] INFO  core.TestListener - ========== Test Suite Finished: Login Tests - Running in Parallel ==========
+2026-02-22 09:29:09.308 [Test worker] INFO  core.TestListener - Total tests: 3, Passed: 3, Failed: 1, Skipped: 0
+2026-02-22 09:29:09.458 [Test worker] INFO  core.TestListener - ExtentReports flushed successfully

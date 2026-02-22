@@ -1,77 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="saucedemo.login.LoginTest" tests="2" skipped="1" failures="1" errors="0" timestamp="2025-12-13T07:49:47" hostname="Muhamad-Rizki.local" time="0.636">
+<testsuite name="saucedemo.login.LoginTest" tests="4" skipped="0" failures="1" errors="0" timestamp="2026-02-22T02:28:57" hostname="Muhamad-Rizki.local" time="11.208">
   <properties/>
-  <testcase name="setUp" classname="saucedemo.login.LoginTest" time="0.627">
-    <failure message="org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line &#10;Host info: host: 'Muhamad-Rizki.local', ip: '2001:448a:2098:2ba3:f0c5:e480:74b2:9b2b%en0'&#10;Build info: version: '4.35.0', revision: '1c58e5028b'&#10;System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.1.2', java.version: '17.0.17'&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:firefoxOptions: {prefs: {remote.active-protocols: 1}}}]}]" type="org.openqa.selenium.SessionNotCreatedException">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line 
-Host info: host: 'Muhamad-Rizki.local', ip: '2001:448a:2098:2ba3:f0c5:e480:74b2:9b2b%en0'
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '14.1.2', java.version: '17.0.17'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:firefoxOptions: {prefs: {remote.active-protocols: 1}}}]}]
-	at app//org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
-	at app//org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
-	at app//org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
-	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:187)
-	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:246)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:174)
-	at app//org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:137)
-	at app//org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:132)
-	at app//org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:114)
-	at app//org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:109)
-	at app//org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:94)
-	at app//org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:84)
-	at app//core.DriverManager.initDriver(DriverManager.java:40)
-	at app//core.BaseTest.setUp(BaseTest.java:30)
-	at java.base@17.0.17/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@17.0.17/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base@17.0.17/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@17.0.17/java.lang.reflect.Method.invoke(Method.java:569)
-	at app//org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at app//org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at app//org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at app//org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at app//org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:655)
-	at app//org.testng.TestRunner.beforeRun(TestRunner.java:644)
-	at app//org.testng.TestRunner.run(TestRunner.java:610)
-	at app//org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at app//org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at app//org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at app//org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at app//org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at app//org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at app//org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at app//org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at app//org.testng.TestNG.runSuites(TestNG.java:1112)
-	at app//org.testng.TestNG.run(TestNG.java:1079)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:153)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:95)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63)
-	at java.base@17.0.17/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@17.0.17/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base@17.0.17/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@17.0.17/java.lang.reflect.Method.invoke(Method.java:569)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
-	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:121)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
-	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+  <testcase name="testDataDriven[0](standard_user, secret_sauce, success)" classname="saucedemo.login.LoginTest" time="1.011"/>
+  <testcase name="testDataDriven[0](locked_out_user, secret_sauce, failed)" classname="saucedemo.login.LoginTest" time="11.098"/>
+  <testcase name="testFailedLogin" classname="saucedemo.login.LoginTest" time="11.2"/>
+  <testcase name="testLogin" classname="saucedemo.login.LoginTest" time="11.095">
+    <failure message="java.lang.AssertionError: User should be able to see the Products page after logging in with valid credentials expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: User should be able to see the Products page after logging in with valid credentials expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at saucedemo.login.LoginTest.testLogin(LoginTest.java:25)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
 </failure>
   </testcase>
-  <testcase name="testLogin" classname="saucedemo.login.LoginTest" time="0.0">
-    <skipped/>
-  </testcase>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <system-out><![CDATA[09:28:52.587 [TestNG-test-Login Tests - Running in Parallel-1] INFO  saucedemo.login.LoginTest - Loading test data from Excel file
+=== Driver Initialization ===
+=== Driver Initialization ===
+Running in CI: false
+Setting up ChromeDriver via WebDriverManager
+Running in CI: false
+Setting up ChromeDriver via WebDriverManager
+Creating ChromeDriver instance...
+Creating ChromeDriver instance...
+=== Driver Initialization ===
+=== Driver Initialization ===
+Running in CI: false
+Setting up ChromeDriver via WebDriverManager
+Running in CI: false
+Setting up ChromeDriver via WebDriverManager
+Creating ChromeDriver instance...
+Creating ChromeDriver instance...
+ChromeDriver created successfully!
+ChromeDriver created successfully!
+ChromeDriver created successfully!
+ChromeDriver created successfully!
+09:28:57.626 [TestNG-PoolService-2] INFO  core.TestListener - ---------- Test Started: testDataDriven ----------
+09:28:57.627 [TestNG-test-Login Tests - Running in Parallel-3] INFO  core.TestListener - ---------- Test Started: testLogin ----------
+09:28:57.629 [TestNG-test-Login Tests - Running in Parallel-2] INFO  core.TestListener - ---------- Test Started: testFailedLogin ----------
+09:28:57.663 [TestNG-test-Login Tests - Running in Parallel-2] INFO  saucedemo.login.LoginTest - ========== Starting testFailedLogin ==========
+09:28:57.663 [TestNG-PoolService-2] INFO  saucedemo.login.LoginTest - ========== Starting testDataDriven ==========
+09:28:57.663 [TestNG-test-Login Tests - Running in Parallel-3] INFO  saucedemo.login.LoginTest - ========== Starting testLogin ==========
+09:28:57.671 [TestNG-PoolService-2] INFO  saucedemo.login.LoginTest - Test data - Username: standard_user, Expected Result: success
+09:28:57.683 [TestNG-PoolService-1] INFO  core.TestListener - ---------- Test Started: testDataDriven ----------
+09:28:57.687 [TestNG-PoolService-1] INFO  saucedemo.login.LoginTest - ========== Starting testDataDriven ==========
+09:28:57.689 [TestNG-test-Login Tests - Running in Parallel-3] INFO  org.example.saucedemo.LoginPage - LoginPage initialized
+09:28:57.689 [TestNG-PoolService-2] INFO  org.example.saucedemo.LoginPage - LoginPage initialized
+09:28:57.689 [TestNG-test-Login Tests - Running in Parallel-2] INFO  org.example.saucedemo.LoginPage - LoginPage initialized
+09:28:57.691 [TestNG-PoolService-1] INFO  saucedemo.login.LoginTest - Test data - Username: locked_out_user, Expected Result: failed
+09:28:57.695 [TestNG-test-Login Tests - Running in Parallel-2] INFO  org.example.saucedemo.LoginPage - Attempting to login with username: locked_out_user
+09:28:57.700 [TestNG-PoolService-2] INFO  org.example.saucedemo.LoginPage - Attempting to login with username: standard_user
+09:28:57.706 [TestNG-test-Login Tests - Running in Parallel-3] INFO  org.example.saucedemo.LoginPage - Attempting to login with username: locked_out_user
+09:28:57.715 [TestNG-PoolService-1] INFO  org.example.saucedemo.LoginPage - LoginPage initialized
+09:28:57.730 [TestNG-PoolService-1] INFO  org.example.saucedemo.LoginPage - Attempting to login with username: locked_out_user
+09:28:58.100 [TestNG-PoolService-1] INFO  org.example.saucedemo.LoginPage - Username entered
+09:28:58.101 [TestNG-test-Login Tests - Running in Parallel-3] INFO  org.example.saucedemo.LoginPage - Username entered
+09:28:58.129 [TestNG-test-Login Tests - Running in Parallel-2] INFO  org.example.saucedemo.LoginPage - Username entered
+09:28:58.128 [TestNG-PoolService-2] INFO  org.example.saucedemo.LoginPage - Username entered
+09:28:58.245 [TestNG-PoolService-2] INFO  org.example.saucedemo.LoginPage - Password entered
+09:28:58.255 [TestNG-PoolService-1] INFO  org.example.saucedemo.LoginPage - Password entered
+09:28:58.255 [TestNG-test-Login Tests - Running in Parallel-3] INFO  org.example.saucedemo.LoginPage - Password entered
+09:28:58.259 [TestNG-test-Login Tests - Running in Parallel-2] INFO  org.example.saucedemo.LoginPage - Password entered
+09:28:58.434 [TestNG-PoolService-1] INFO  org.example.saucedemo.LoginPage - Login button clicked
+09:28:58.434 [TestNG-test-Login Tests - Running in Parallel-3] INFO  org.example.saucedemo.LoginPage - Login button clicked
+09:28:58.434 [TestNG-test-Login Tests - Running in Parallel-2] INFO  org.example.saucedemo.LoginPage - Login button clicked
+09:28:58.435 [TestNG-test-Login Tests - Running in Parallel-3] INFO  saucedemo.login.LoginTest - Verifying user can see the Products page after login
+09:28:58.435 [TestNG-test-Login Tests - Running in Parallel-3] INFO  org.example.saucedemo.LoginPage - Checking if user is logged in successfully
+09:28:58.437 [TestNG-PoolService-1] INFO  saucedemo.login.LoginTest - Verifying failed login for user: locked_out_user
+09:28:58.439 [TestNG-test-Login Tests - Running in Parallel-2] INFO  saucedemo.login.LoginTest - Verifying error message is displayed for failed login
+09:28:58.439 [TestNG-test-Login Tests - Running in Parallel-2] INFO  org.example.saucedemo.LoginPage - Checking if error message is displayed
+09:28:58.444 [TestNG-PoolService-1] INFO  saucedemo.login.LoginTest - Checking if error message is displayed
+09:28:58.445 [TestNG-PoolService-1] INFO  org.example.saucedemo.LoginPage - Checking if error message is displayed
+09:28:58.504 [TestNG-test-Login Tests - Running in Parallel-2] INFO  org.example.saucedemo.LoginPage - Error message is displayed
+09:28:58.504 [TestNG-PoolService-1] INFO  org.example.saucedemo.LoginPage - Error message is displayed
+09:28:58.506 [TestNG-test-Login Tests - Running in Parallel-2] INFO  saucedemo.login.LoginTest - Checked: Error message visibility
+09:28:58.506 [TestNG-test-Login Tests - Running in Parallel-2] INFO  saucedemo.login.LoginTest - Verifying user cannot access Products page with invalid credentials
+09:28:58.506 [TestNG-test-Login Tests - Running in Parallel-2] INFO  org.example.saucedemo.LoginPage - Checking if user is logged in successfully
+09:28:58.506 [TestNG-PoolService-1] INFO  saucedemo.login.LoginTest - Checked: Error message visibility
+09:28:58.507 [TestNG-PoolService-1] INFO  saucedemo.login.LoginTest - Checking if user cannot access Products page
+09:28:58.507 [TestNG-PoolService-1] INFO  org.example.saucedemo.LoginPage - Checking if user is logged in successfully
+09:28:58.522 [TestNG-PoolService-2] INFO  org.example.saucedemo.LoginPage - Login button clicked
+09:28:58.524 [TestNG-PoolService-2] INFO  saucedemo.login.LoginTest - Verifying successful login for user: standard_user
+09:28:58.524 [TestNG-PoolService-2] INFO  saucedemo.login.LoginTest - Checking if user is logged in successfully
+09:28:58.525 [TestNG-PoolService-2] INFO  org.example.saucedemo.LoginPage - Checking if user is logged in successfully
+09:28:58.621 [TestNG-PoolService-2] INFO  org.example.saucedemo.LoginPage - User is logged in successfully - Products page is displayed
+09:28:58.622 [TestNG-PoolService-2] INFO  saucedemo.login.LoginTest - Checked: Login success status
+09:28:58.622 [TestNG-PoolService-2] INFO  saucedemo.login.LoginTest - Checking if user is redirected to inventory page
+09:28:58.631 [TestNG-PoolService-2] INFO  org.example.saucedemo.LoginPage - Current URL: https://www.saucedemo.com/inventory.html
+09:28:58.631 [TestNG-PoolService-2] INFO  saucedemo.login.LoginTest - Checked: Inventory page redirection
+09:28:58.632 [TestNG-PoolService-2] INFO  saucedemo.login.LoginTest - Running all soft assertions for user: standard_user
+09:28:58.632 [TestNG-PoolService-2] INFO  saucedemo.login.LoginTest - ========== testDataDriven completed for user: standard_user ==========
+09:28:58.633 [TestNG-PoolService-2] INFO  core.TestListener - Test PASSED: testDataDriven (Duration: 1011ms)
+09:29:08.712 [TestNG-test-Login Tests - Running in Parallel-3] ERROR org.example.saucedemo.LoginPage - Failed to verify login status: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.className: title' (tried for 10 second(s) with 500 milliseconds interval)
+09:29:08.716 [TestNG-test-Login Tests - Running in Parallel-3] ERROR core.TestListener - Test FAILED: testLogin
+09:29:08.716 [TestNG-test-Login Tests - Running in Parallel-3] ERROR core.TestListener - Failure reason: User should be able to see the Products page after logging in with valid credentials expected [true] but found [false]
+09:29:08.778 [TestNG-PoolService-1] ERROR org.example.saucedemo.LoginPage - Failed to verify login status: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.className: title' (tried for 10 second(s) with 500 milliseconds interval)
+09:29:08.780 [TestNG-PoolService-1] INFO  saucedemo.login.LoginTest - Checked: Products page access denied
+09:29:08.781 [TestNG-PoolService-1] INFO  saucedemo.login.LoginTest - Running all soft assertions for user: locked_out_user
+09:29:08.781 [TestNG-PoolService-1] INFO  saucedemo.login.LoginTest - ========== testDataDriven completed for user: locked_out_user ==========
+09:29:08.781 [TestNG-PoolService-1] INFO  core.TestListener - Test PASSED: testDataDriven (Duration: 11098ms)
+09:29:08.785 [TestNG-test-Login Tests - Running in Parallel-2] ERROR org.example.saucedemo.LoginPage - Failed to verify login status: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.className: title' (tried for 10 second(s) with 500 milliseconds interval)
+09:29:08.786 [TestNG-test-Login Tests - Running in Parallel-2] INFO  saucedemo.login.LoginTest - Checked: Products page access denied
+09:29:08.786 [TestNG-test-Login Tests - Running in Parallel-2] INFO  saucedemo.login.LoginTest - Verifying error message contains 'locked out' text
+09:29:08.786 [TestNG-test-Login Tests - Running in Parallel-2] INFO  org.example.saucedemo.LoginPage - Getting error message text
+09:29:08.828 [TestNG-test-Login Tests - Running in Parallel-2] INFO  org.example.saucedemo.LoginPage - Error message: Epic sadface: Sorry, this user has been locked out.
+09:29:08.829 [TestNG-test-Login Tests - Running in Parallel-2] INFO  saucedemo.login.LoginTest - Checked: Error message content
+09:29:08.829 [TestNG-test-Login Tests - Running in Parallel-2] INFO  saucedemo.login.LoginTest - Running all soft assertions
+09:29:08.829 [TestNG-test-Login Tests - Running in Parallel-2] INFO  saucedemo.login.LoginTest - ========== testFailedLogin completed ==========
+09:29:08.829 [TestNG-test-Login Tests - Running in Parallel-2] INFO  core.TestListener - Test PASSED: testFailedLogin (Duration: 11200ms)
+09:29:09.072 [TestNG-test-Login Tests - Running in Parallel-3] INFO  core.TestListener - Screenshot saved: /Users/muhamad.rizki/Downloads/project-demo/repo-qa/reports/screenshots/testLogin_20260222_092908.png
+09:29:09.074 [TestNG-test-Login Tests - Running in Parallel-3] INFO  core.TestListener - Screenshot captured: screenshots/testLogin_20260222_092908.png
+]]></system-out>
+  <system-err><![CDATA[Feb 22, 2026 9:28:56 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 145
+Feb 22, 2026 9:28:56 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 145
+Feb 22, 2026 9:28:56 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 145.0.7632.109. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.35.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Feb 22, 2026 9:28:56 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 145
+Feb 22, 2026 9:28:56 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 145.0.7632.109. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.35.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Feb 22, 2026 9:28:56 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 145
+Feb 22, 2026 9:28:56 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 145.0.7632.109. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.35.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Feb 22, 2026 9:28:56 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 145.0.7632.109. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.35.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
 </testsuite>

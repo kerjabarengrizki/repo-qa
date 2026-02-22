@@ -1,4 +1,4 @@
-package org.example.login;
+package org.example.saucedemo;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

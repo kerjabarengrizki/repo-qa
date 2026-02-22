@@ -5,6 +5,7 @@
 ![Selenium](https://img.shields.io/badge/Selenium-4.35.0-green)
 ![TestNG](https://img.shields.io/badge/TestNG-7.10.2-red)
 ![Gradle](https://img.shields.io/badge/Gradle-8.5-blue)
+![ExtentReports](https://img.shields.io/badge/ExtentReports-5.1.2-purple)
 
 ## 📋 Table of Contents
 - [Overview](#-overview)
@@ -16,6 +17,7 @@
 - [Running Tests Locally](#-running-tests-locally)
 - [CI/CD Setup](#-cicd-setup)
 - [Test Reports](#-test-reports)
+- [TestListener & ExtentReports](#-testlistener--extentreports)
 - [Troubleshooting](#-troubleshooting)
 - [Contributing](#-contributing)
 
@@ -29,6 +31,8 @@ A comprehensive Selenium WebDriver automation testing framework built with Java,
 ✅ **CI/CD Integration** - GitHub Actions for automated testing  
 ✅ **Multiple Environments** - Staging, Production configs  
 ✅ **Page Object Model** - Clean, maintainable test architecture  
+✅ **ExtentReports Integration** - Beautiful HTML test reports  
+✅ **Automatic Screenshots** - Capture screenshots on test failure  
 ✅ **Detailed Reports** - HTML test reports with screenshots  
 ✅ **Headless Execution** - For CI/CD environments  
 ✅ **Parallel Testing** - Faster test execution  
@@ -453,7 +457,96 @@ strategy:
 
 ### Common Issues
 
-#### 1. **Tests fail with SessionNotCreatedException**
+#### 1. **Git Push Authentication Failed**
+
+**Error**:
+```
+remote: Invalid username or token. Password authentication is not supported for Git operations.
+fatal: Authentication failed for 'https://github.com/...'
+```
+
+**Cause**: GitHub no longer supports password authentication. You must use a Personal Access Token (PAT) or SSH key.
+
+**Solution A - Personal Access Token (Recommended)**:
+1. Go to GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic)
+2. Click "Generate new token (classic)"
+3. Select scopes: `repo` (full access)
+4. Generate and copy the token
+5. Use token instead of password:
+   ```bash
+   git remote set-url origin https://<USERNAME>:<TOKEN>@github.com/kerjabarengrizki/repo-qa.git
+   ```
+   Or when prompted for password, enter the token instead.
+
+**Solution B - SSH Key**:
+```bash
+ssh-keygen -t ed25519 -C "your_email@example.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+cat ~/.ssh/id_ed25519.pub
+```
+Add the public key to GitHub → Settings → SSH and GPG keys, then:
+```bash
+git remote set-url origin git@github.com:kerjabarengrizki/repo-qa.git
+```
+
+**Solution C - GitHub CLI**:
+```bash
+brew install gh
+gh auth login
+```
+
+---
+
+#### 2. **Tests fail with SessionNotCreatedException**
+
+**Error**:
+```
+org.openqa.selenium.SessionNotCreatedException at ProtocolHandshake.java:114
+```
+
+**Cause**: WebDriver session couldn't be created. This typically happens in CI/CD when:
+- Chrome browser is not installed correctly
+- ChromeDriver version doesn't match Chrome version
+- Headless mode is not configured properly
+- Missing required Chrome flags for Linux environment
+
+**Solution for CI/CD**:
+1. Ensure `DriverManager.java` has proper CI detection:
+   ```java
+   String githubActions = System.getenv("GITHUB_ACTIONS");
+   boolean isCI = githubActions != null && githubActions.equals("true");
+   ```
+
+2. Required Chrome options for CI:
+   ```java
+   options.addArguments("--headless=new");
+   options.addArguments("--no-sandbox");
+   options.addArguments("--disable-dev-shm-usage");
+   options.addArguments("--disable-gpu");
+   options.addArguments("--window-size=1920,1080");
+   ```
+
+3. Verify CI workflow sets environment variables:
+   ```yaml
+   env:
+     GITHUB_ACTIONS: true
+     CHROME_BIN: /usr/bin/google-chrome
+     CHROMEDRIVER_PATH: /usr/local/bin/chromedriver
+   ```
+
+4. Use `DriverManager.getDriver()` in test classes (not direct `driver` reference)
+
+**Solution for Local**:
+```bash
+./gradlew clean --no-daemon
+google-chrome --version
+cat src/test/resources/suites/smoke.xml
+```
+
+---
+
+#### 3. **Tests fail with SessionNotCreatedException**
 
 **Cause**: Browser/driver version mismatch
 
@@ -774,6 +867,8 @@ git commit -m "Docs: add installation instructions"
 
 📖 **Documentation**
 - Main README: [You're reading it!]
+- Java 17 Setup Guide: [docs/JAVA_17_SETUP_GUIDE.md](docs/JAVA_17_SETUP_GUIDE.md)
+- TestListener & ExtentReports: [docs/TEST_LISTENER_EXTENT_REPORT.md](docs/TEST_LISTENER_EXTENT_REPORT.md)
 - Troubleshooting: [CI_TROUBLESHOOTING.md](CI_TROUBLESHOOTING.md)
 - CI/CD Setup: [.github/workflows/ci.yml](.github/workflows/ci.yml)
 
@@ -787,6 +882,7 @@ git commit -m "Docs: add installation instructions"
 - [TestNG Documentation](https://testng.org/doc/documentation-main.html)
 - [Gradle User Guide](https://docs.gradle.org/current/userguide/userguide.html)
 - [GitHub Actions Docs](https://docs.github.com/en/actions)
+- [Eclipse Temurin JDK Downloads](https://adoptium.net/temurin/releases/)
 
 ### Getting Help
 
@@ -851,7 +947,7 @@ git push origin main
 ![Selenium](https://img.shields.io/badge/Selenium-4.35.0-green)
 ![License](https://img.shields.io/badge/License-Educational-blue)
 
-**Last Updated**: December 14, 2025  
+**Last Updated**: February 21, 2026  
 **Status**: ✅ Active Development  
 **CI/CD**: ✅ Fully Configured  
 

@@ -2,9 +2,9 @@ package saucedemo.transaction;
 
 import core.BaseTest;
 import core.DriverManager;
-import org.example.login.LoginPage;
-import org.example.login.HomePage;
-import org.example.login.Transaction;
+import org.example.saucedemo.LoginPage;
+import org.example.saucedemo.HomePage;
+import org.example.saucedemo.Transaction;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
