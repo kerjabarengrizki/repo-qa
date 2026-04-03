@@ -17,7 +17,7 @@ public class LoginTest extends BaseTest {
 
     @Test(priority = 3, groups = {"smoke"}, description = "Test successful login")
     public void testLogin() {
-        log.info("========== Starting testLogin ==========");
+        log.info("Test Login with Standard User");
         LoginPage loginPage = new LoginPage(DriverManager.getDriver());
         loginPage.login(config.getProperty("standardUser"), config.getProperty("password"));
 
