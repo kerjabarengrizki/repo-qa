@@ -16,6 +16,7 @@ public class E2ETests extends BaseTest {
 
     private static final Logger log = LogManager.getLogger(E2ETests.class);
 
+    //Optional Runner for Eccomerce Tests, if you want to run with specific browser, you can pass the parameter in testng.xml, otherwise it will default to chrome
     @Override
     @BeforeMethod(alwaysRun = true)
     @Parameters("browser")
