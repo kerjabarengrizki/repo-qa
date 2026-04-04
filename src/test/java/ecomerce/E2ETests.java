@@ -2,21 +2,28 @@ package ecomerce;
 
 import core.BaseTest;
 import core.DriverManager;
-import core.TestUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.example.eccomerce.Login;
 import org.example.eccomerce.Checkout;
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
-import saucedemo.login.LoginTest;
 
 public class E2ETests extends BaseTest {
 
+    private static final Logger log = LogManager.getLogger(E2ETests.class);
 
-    private static final Logger log = LogManager.getLogger(LoginTest.class);
+    @Override
+    @BeforeMethod(alwaysRun = true)
+    @Parameters("browser")
+    public void setUp(@Optional("chrome") String browser) {
+        DriverManager.initDriver(browser);
+        DriverManager.getDriver().manage().window().maximize();
+        DriverManager.getDriver().get(config.getProperty("bookstoreUrl"));
+    }
 
     @Test(priority = 1, groups = {"e2e"}, description = "Test successful login")
     public void loginUsers() {
