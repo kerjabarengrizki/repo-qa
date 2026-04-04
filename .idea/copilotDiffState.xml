@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/src/test/resources/config/prod.properties">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/test/resources/config/prod.properties" />
+              <option name="originalContent" value="baseUrl=https://www.saucedemo.com/&#10;bookstoreUrl=https://practice.expandtesting.com/bookstore/&#10;standardUser=standard_user&#10;password=secret_sauce&#10;failedUser=locked_out_user" />
+              <option name="updatedContent" value="baseUrl=https://www.saucedemo.com/&#10;bookstoreUrl=https://practice.expandtesting.com/bookstore/&#10;standardUser=standard_user&#10;password=secret_sauce&#10;failedUser=locked_out_user" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/resources/config/staging.properties">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/test/resources/config/staging.properties" />
+              <option name="originalContent" value="baseUrl=https://www.saucedemo.com&#10;bookstoreUrl=https://practice.expandtesting.com/bookstore/&#10;standardUser=standard_user&#10;password=secret_sauce&#10;failedUser=locked_out_user&#10;emailUser=rizkidmhm+1@gmail.com&#10;passwordUser=admin123&#10;lastName=Doe&#10;postalCode=12345&#10;name=John&#10;address=Bogor&#10;cardName=John&#10;cardNumber=4242424242424242&#10;expiryMonth=12&#10;expiryYear=34&#10;cvv=123&#10;bookName=Agile Testing" />
+              <option name="updatedContent" value="baseUrl=https://www.saucedemo.com&#10;bookstoreUrl=https://practice.expandtesting.com/bookstore/&#10;standardUser=standard_user&#10;password=secret_sauce&#10;failedUser=locked_out_user&#10;emailUser=rizkidmhm+1@gmail.com&#10;passwordUser=admin123&#10;lastName=Doe&#10;postalCode=12345&#10;name=John&#10;address=Bogor&#10;cardName=John&#10;cardNumber=4242424242424242&#10;expiryMonth=12&#10;expiryYear=34&#10;cvv=123&#10;bookName=Agile Testing" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
